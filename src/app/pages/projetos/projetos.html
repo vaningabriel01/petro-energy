@@ -1,0 +1,54 @@
+<div class="projetos">
+
+  <section class="projetos__hero" aria-label="Projetos Sociais da Petro Energy">
+    <div class="projetos__hero-container">
+      <h1 class="projetos__hero-titulo">Projetos Sociais</h1>
+      <p class="projetos__hero-subtitulo">
+        Nosso compromisso com as comunidades e o meio ambiente
+      </p>
+    </div>
+  </section>
+
+  <section class="projetos__intro" aria-labelledby="titulo-intro">
+    <div class="projetos__container">
+      <h2 id="titulo-intro" class="projetos__titulo">
+        Responsabilidade que transforma
+      </h2>
+      <p class="projetos__texto">
+        A Petro Energy acredita que o desenvolvimento econômico deve caminhar
+        junto com o desenvolvimento social. Por isso, investimos anualmente
+        mais de R$ 300 milhões em projetos sociais, ambientais e culturais
+        nas regiões onde atuamos.
+      </p>
+    </div>
+  </section>
+
+  <section class="projetos__lista" aria-labelledby="titulo-lista">
+    <div class="projetos__container">
+
+      <h2 id="titulo-lista" class="projetos__titulo">Nossas iniciativas</h2>
+
+      <div class="projetos__grid">
+        @for (projeto of projetos(); track projeto.id) {
+          <article class="projeto-card" [attr.aria-label]="'Projeto: ' + projeto.nome">
+
+            <img
+              class="projeto-card__imagem"
+              [src]="projeto.imagem"
+              [alt]="'Imagem do projeto ' + projeto.nome"
+            />
+
+            <div class="projeto-card__corpo">
+              <span class="projeto-card__area">{{ projeto.area }}</span>
+              <h3 class="projeto-card__titulo">{{ projeto.nome }}</h3>
+              <p class="projeto-card__descricao">{{ projeto.descricao }}</p>
+            </div>
+
+          </article>
+        }
+      </div>
+
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,168 @@
+.sobre__hero {
+  background-color: #0a1628;
+  color: #fff;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.sobre__hero-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.sobre__hero-titulo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.sobre__hero-subtitulo {
+  font-size: 1rem;
+  color: #a8c4e0;
+}
+
+.sobre__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.sobre__historia {
+  padding: 4rem 1.5rem;
+  background-color: #f0f6ff;
+}
+
+.sobre__titulo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0a1628;
+  margin-bottom: 1.5rem;
+}
+
+.sobre__titulo--claro {
+  color: #fff;
+}
+
+.sobre__texto {
+  font-size: 1rem;
+  color: #4a6a8a;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+.sobre__mvv {
+  padding: 4rem 1.5rem;
+  background-color: #fff;
+}
+
+.sobre__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.sobre__card {
+  background-color: #f0f6ff;
+  border: 1px solid #dce8f5;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.sobre__card-icone {
+  font-size: 2rem;
+}
+
+.sobre__card-titulo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a1628;
+}
+
+.sobre__card-texto {
+  font-size: 0.95rem;
+  color: #4a6a8a;
+  line-height: 1.7;
+}
+
+.sobre__card-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sobre__card-lista li {
+  font-size: 0.95rem;
+  color: #4a6a8a;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.sobre__card-lista li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #1e6fbf;
+}
+
+.sobre__numeros {
+  background-color: #0a1628;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.sobre__stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.sobre__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sobre__stat-numero {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4da6ff;
+}
+
+.sobre__stat-label {
+  font-size: 0.9rem;
+  color: #a8c4e0;
+}
+
+@media (max-width: 900px) {
+  .sobre__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre__stats {
+    gap: 2rem;
+  }
+
+  .sobre__hero-titulo {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sobre__stat-numero {
+    font-size: 2rem;
+  }
+
+  .sobre__stats {
+    gap: 1.5rem;
+  }
+}

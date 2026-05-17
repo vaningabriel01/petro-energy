@@ -1,0 +1,52 @@
+<div class="post-view">
+
+  @if (carregando()) {
+    <div class="post-view__carregando" role="status" aria-live="polite">
+      <p>Carregando post...</p>
+    </div>
+  }
+
+  @if (erro()) {
+    <div class="post-view__erro" role="alert" aria-live="assertive">
+      <p>Post não encontrado.</p>
+      <a routerLink="/" class="post-view__voltar">← Voltar para a home</a>
+    </div>
+  }
+
+  @if (post()) {
+    <article class="post-view__artigo" aria-labelledby="titulo-post">
+
+      <div class="post-view__hero">
+        <img
+          class="post-view__imagem"
+          [src]="post()!.imagem"
+          [alt]="'Imagem do post: ' + post()!.titulo"
+        />
+      </div>
+
+      <div class="post-view__container">
+
+        <header class="post-view__header">
+          <span class="post-view__categoria">{{ post()!.categoria }}</span>
+          <h1 class="post-view__titulo" id="titulo-post">{{ post()!.titulo }}</h1>
+          <time class="post-view__data" [dateTime]="post()!.data">
+            Publicado em {{ post()!.data | date:'dd/MM/yyyy' }}
+          </time>
+        </header>
+
+        <section class="post-view__conteudo" aria-label="Conteúdo do post">
+          <p>{{ post()!.conteudo }}</p>
+        </section>
+
+        <footer class="post-view__footer">
+          <a routerLink="/" class="post-view__voltar" aria-label="Voltar para a página inicial">
+            ← Voltar para a home
+          </a>
+        </footer>
+
+      </div>
+
+    </article>
+  }
+
+</div>

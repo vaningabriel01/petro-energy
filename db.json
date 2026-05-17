@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "titulo": "Petro Energy inaugura nova plataforma no pré-sal",
+      "resumo": "A Petro Energy anunciou hoje a inauguração de sua mais nova plataforma de extração no campo do pré-sal, reforçando seu compromisso com a produção sustentável de energia.",
+      "conteudo": "A Petro Energy anunciou hoje a inauguração de sua mais nova plataforma de extração no campo do pré-sal, localizada a 300 quilômetros da costa brasileira. O projeto representa um investimento de R$ 4,2 bilhões e tem capacidade para produzir até 150 mil barris de petróleo por dia. A plataforma conta com tecnologia de ponta para minimizar impactos ambientais, incluindo sistemas de captura de gás e tratamento de água. A inauguração marca um novo capítulo na história da empresa, consolidando sua posição como uma das maiores produtoras de petróleo do Brasil. A operação vai gerar mais de 2 mil empregos diretos e indiretos na região.",
+      "imagem": "data:image/jpeg;base64,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",
+      "data": "2025-05-10",
+      "categoria": "Operações"
+    },
+    {
+      "id": 2,
+      "titulo": "Petro Energy investe em energia renovável",
+      "resumo": "Em linha com as metas globais de sustentabilidade, a Petro Energy anuncia investimento de R$ 2 bilhões em projetos de energia solar e eólica para os próximos cinco anos.",
+      "conteudo": "Em linha com as metas globais de sustentabilidade, a Petro Energy anuncia investimento de R$ 2 bilhões em projetos de energia solar e eólica para os próximos cinco anos. Os projetos serão desenvolvidos em parceria com empresas especializadas do setor de energias renováveis e contemplam a instalação de parques solares no Nordeste e parques eólicos no Sul do país. A iniciativa faz parte do plano estratégico da empresa para reduzir em 40% suas emissões de carbono até 2030. O CEO da Petro Energy destacou que a transição energética é uma prioridade absoluta para a companhia.",
+      "imagem": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800",
+      "data": "2025-04-22",
+      "categoria": "Sustentabilidade"
+    },
+    {
+      "id": 3,
+      "titulo": "Resultado do primeiro trimestre supera expectativas",
+      "resumo": "A Petro Energy divulgou seus resultados do primeiro trimestre de 2025, com lucro líquido de R$ 8,3 bilhões, superando as projeções do mercado em 12%.",
+      "conteudo": "A Petro Energy divulgou seus resultados do primeiro trimestre de 2025, com lucro líquido de R$ 8,3 bilhões, superando as projeções do mercado em 12%. A receita total atingiu R$ 42 bilhões, um crescimento de 18% em relação ao mesmo período do ano anterior. O desempenho foi impulsionado pelo aumento da produção nas plataformas do pré-sal e pela valorização do petróleo no mercado internacional. A empresa também anunciou o pagamento de dividendos aos acionistas no valor de R$ 1,20 por ação. O CFO da companhia destacou a solidez financeira da empresa e seu compromisso com a geração de valor para os acionistas.",
+      "imagem": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800",
+      "data": "2025-03-15",
+      "categoria": "Finanças"
+    },
+    {
+      "id": 4,
+      "titulo": "Petro Energy lança programa de inovação tecnológica",
+      "resumo": "O programa PetroTech vai investir R$ 500 milhões em startups e projetos de tecnologia aplicados ao setor de energia nos próximos três anos.",
+      "conteudo": "O programa PetroTech vai investir R$ 500 milhões em startups e projetos de tecnologia aplicados ao setor de energia nos próximos três anos. A iniciativa busca acelerar a transformação digital da companhia e fomentar o ecossistema de inovação brasileiro. As áreas prioritárias incluem inteligência artificial aplicada à exploração de petróleo, automação de plataformas offshore e desenvolvimento de combustíveis alternativos. As inscrições para startups interessadas em participar do programa estão abertas até o final do mês.",
+      "imagem": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800",
+      "data": "2025-02-28",
+      "categoria": "Inovação"
+    },
+    {
+      "id": 5,
+      "titulo": "Acordo internacional fortalece presença global da Petro Energy",
+      "resumo": "A Petro Energy assinou um acordo de cooperação com empresas europeias para exploração conjunta de campos petrolíferos na costa africana.",
+      "conteudo": "A Petro Energy assinou um acordo de cooperação com empresas europeias para exploração conjunta de campos petrolíferos na costa africana. O acordo prevê investimentos conjuntos de US$ 3 bilhões ao longo de dez anos e fortalece a presença internacional da companhia. A parceria também inclui transferência de tecnologia e desenvolvimento de recursos humanos locais nos países envolvidos. O presidente da Petro Energy afirmou que a expansão internacional é parte fundamental da estratégia de crescimento da empresa para a próxima década.",
+      "imagem": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800",
+      "data": "2025-01-18",
+      "categoria": "Internacional"
+    }
+  ],
+  "projetos": [
+    {
+      "id": 1,
+      "nome": "Petro Escola",
+      "descricao": "Programa de apoio à educação pública em comunidades próximas às operações da Petro Energy. Já beneficiou mais de 15 mil estudantes com material escolar, bolsas e infraestrutura.",
+      "imagem": "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=800",
+      "area": "Educação"
+    },
+    {
+      "id": 2,
+      "nome": "Petro Verde",
+      "descricao": "Iniciativa de reflorestamento e preservação ambiental que já plantou mais de 500 mil árvores em áreas degradadas do Brasil, em parceria com ONGs ambientais.",
+      "imagem": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
+      "area": "Meio Ambiente"
+    },
+    {
+      "id": 3,
+      "nome": "Petro Saúde",
+      "descricao": "Programa de saúde comunitária que oferece atendimento médico gratuito, exames e medicamentos para famílias em situação de vulnerabilidade nas regiões onde atuamos.",
+      "imagem": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800",
+      "area": "Saúde"
+    },
+    {
+      "id": 4,
+      "nome": "Petro Pesca",
+      "descricao": "Apoio às comunidades pesqueiras afetadas pelas operações marítimas da empresa, com capacitação profissional, equipamentos e assistência técnica para pescadores artesanais.",
+      "imagem": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800",
+      "area": "Comunidade"
+    }
+  ]
+}

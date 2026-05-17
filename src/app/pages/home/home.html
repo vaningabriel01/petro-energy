@@ -1,0 +1,52 @@
+<div class="home">
+
+  <section class="hero" aria-label="Apresentação da Petro Energy">
+    <div class="hero__container">
+      <p class="hero__subtitulo">Energia que move o Brasil</p>
+      <h1 class="hero__titulo">Petro Energy</h1>
+      <p class="hero__descricao">
+        Há mais de 40 anos explorando o potencial energético do Brasil com
+        responsabilidade, inovação e compromisso com o futuro.
+      </p>
+      <a routerLink="/sobre" class="hero__btn" aria-label="Saiba mais sobre a Petro Energy">
+        Conheça a empresa
+      </a>
+    </div>
+  </section>
+
+  <section class="apresentacao" aria-labelledby="titulo-apresentacao">
+    <div class="apresentacao__container">
+      <h2 class="apresentacao__titulo" id="titulo-apresentacao">Quem somos</h2>
+      <p class="apresentacao__texto">
+        A Petro Energy é uma das maiores empresas de energia do Brasil, atuando
+        na exploração, produção e refino de petróleo e gás natural. Com operações
+        em todo o território nacional e presença internacional, a empresa combina
+        tecnologia de ponta com responsabilidade socioambiental.
+      </p>
+      <a routerLink="/sobre" class="apresentacao__link" aria-label="Leia mais sobre nossa história">
+        Nossa história →
+      </a>
+    </div>
+  </section>
+
+  <section class="feed" aria-labelledby="titulo-feed">
+    <div class="feed__container">
+
+      <h2 class="feed__titulo" id="titulo-feed">Últimas notícias</h2>
+
+      <div class="feed__grid">
+        @for (post of posts(); track post.id) {
+          <app-post-card [post]="post"></app-post-card>
+        }
+      </div>
+
+      <div class="feed__rodape">
+        <a routerLink="/projetos" class="feed__btn" aria-label="Ver projetos sociais">
+          Ver projetos sociais →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</div>

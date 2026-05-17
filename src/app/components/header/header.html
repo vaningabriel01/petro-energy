@@ -1,0 +1,47 @@
+<header class="header" role="banner">
+  <div class="header__container">
+
+    <a routerLink="/" class="header__brand" aria-label="Petro Energy - Página inicial">
+      <span class="header__logo" aria-hidden="true">⛽</span>
+      <span class="header__name">Petro Energy</span>
+    </a>
+
+    <nav class="header__nav" aria-label="Menu principal">
+      <ul class="header__menu" role="list">
+        <li role="listitem">
+          <a routerLink="/"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: true}"
+             aria-label="Ir para a página inicial">
+            Home
+          </a>
+        </li>
+        <li role="listitem">
+          <a routerLink="/sobre"
+             routerLinkActive="active"
+             aria-label="Ir para a página sobre">
+            Sobre
+          </a>
+        </li>
+        <li role="listitem">
+          <a routerLink="/projetos"
+             routerLinkActive="active"
+             aria-label="Ir para projetos sociais">
+            Projetos Sociais
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      class="header__menu-toggle"
+      aria-label="Abrir menu de navegação"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+      type="button"
+    >
+      ☰
+    </button>
+
+  </div>
+</header>

@@ -1,0 +1,26 @@
+<article class="post-card">
+
+  <img
+    class="post-card__imagem"
+    [src]="post.imagem"
+    [alt]="post.titulo"
+  />
+
+  <div class="post-card__corpo">
+
+    <span class="post-card__categoria">
+      {{ post.categoria }}
+    </span>
+
+    <h3 class="post-card__titulo">{{ post.titulo }}</h3>
+
+    <p class="post-card__resumo">{{ post.resumo }}</p>
+
+    <div class="post-card__rodape">
+      <span class="post-card__data">{{ post.data | date:'dd/MM/yyyy' }}</span>
+      <a class="post-card__link" [routerLink]="['/post', post.id]">Ler mais →</a>
+    </div>
+
+  </div>
+
+</article>
