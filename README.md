@@ -2,16 +2,16 @@
 
 Trabalho Semestral — Desenvolvimento de Aplicações Web 
 
-**Aluno:** Adriano Viana Dama 
+**Aluno:** Adriano Viana Dama  
 **RA:** 28326260
 
-**Aluno:** Arthur Faria Cardial 
+**Aluno:** Arthur Faria Cardial  
 **RA:** 28326154 
 
-**Aluno:** Caio Fellipe Soares Mendes  
+**Aluno:** Caio Fellipe Soares Mendes   
 **RA:** 28326042  
 
-**Aluno:** Gabriel Camargo Vanin  
+**Aluno:** Gabriel Camargo Vanin   
 **RA:** 28325665 
 
 ---
