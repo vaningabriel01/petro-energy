@@ -318,16 +318,17 @@ Componente → PostsService → HttpClient → JSON Server (porta 3000)
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
 **Gabriel Camargo Vanin**  
 RA: 28325665   
 **Adriano Viana Dama**  
-RA: 28326260 
+RA: 28326260   
 **Arthur Faria Cardial**  
-RA: 28326154 
+RA: 28326154   
 **Caio Fellipe Soares Mendes**  
-RA: 28326042
+RA: 28326042   
+
 ---
 
 *Trabalho desenvolvido para a disciplina de Codigos de alta performance*
