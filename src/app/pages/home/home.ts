@@ -3,11 +3,12 @@ import { RouterModule } from '@angular/router';
 import { PostsService } from '../../services/posts';
 import { PostCard } from '../../components/post-card/post-card';
 import { Post } from '../../interfaces/post';
+import { Logo } from "../../components/logo/logo";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterModule, PostCard],
+  imports: [RouterModule, PostCard, Logo],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

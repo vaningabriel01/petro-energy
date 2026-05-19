@@ -1,29 +1,64 @@
 <footer class="footer" role="contentinfo">
   <div class="footer__container">
 
-    <p class="footer__brand">
-      <app-logo />
-    </p>
+    <div class="footer__zone footer__zone--brand">
+      <p class="footer__brand">
+        <app-logo />
+      </p>
 
-    <p class="footer__text">Energia que move o futuro.</p>
+      <nav aria-label="Links do rodapé">
+        <ul class="footer__links" role="list">
+          <li role="listitem">
+            <a routerLink="/" aria-label="Ir para a página inicial">Home</a>
+          </li>
+          <li role="listitem">
+            <a routerLink="/projetos" aria-label="Ir para a página de projetos sociais">Projetos Sociais</a>
+          </li>
+          <li role="listitem">
+            <a routerLink="/sobre" aria-label="Ir para a página sobre">Sobre</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-    <nav aria-label="Links do rodapé">
-      <ul class="footer__links" role="list">
-        <li role="listitem">
-          <a routerLink="/" aria-label="Ir para a página inicial">Home</a>
-        </li>
-        <li role="listitem">
-          <a routerLink="/projetos" aria-label="Ir para a página de projetos sociais">Projetos Sociais</a>
-        </li>
-        <li role="listitem">
-          <a routerLink="/sobre" aria-label="Ir para a página sobre">Sobre</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="footer__divider" aria-hidden="true"></div>
 
-    <p class="footer__copy">
-      <small>&copy; 2026 Petro Energy. Todos os direitos reservados.</small>
-    </p>
+    <div class="footer__zone footer__zone--search">
+      <p class="footer__search-label">Utilize nossa busca para encontrar o que procura</p>
+      <app-search-bar />
+      <p class="footer__copy">
+        <small>&copy; 2026 Petro Energy. Todos os direitos reservados.</small>
+      </p>
+    </div>
+
+    <div class="footer__divider" aria-hidden="true"></div>
+
+    <div class="footer__zone footer__zone--info">
+      <div class="footer__info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.12 2.2 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09A16 16 0 0016.9 17.08l.46-.46a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+        </svg>
+        <div class="footer__info-text">
+          <span class="footer__info-title">SAC Petro Energy</span>
+          <span class="footer__info-sub">0800 000 0000</span>
+        </div>
+      </div>
+
+      <div class="footer__info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
+        <div class="footer__info-text">
+          <span class="footer__info-title">Portal da Transparência</span>
+          <a routerLink="/transparencia" class="footer__info-link" aria-label="Acesso ao Portal da Transparência">
+            Acesso à Informação
+          </a>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 </footer>
