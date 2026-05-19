@@ -1,9 +1,14 @@
 # 🛢️ Petro Energy — Site Corporativo
 
-Trabalho Semestral — Desenvolvimento de Aplicações Web  
+Trabalho Semestral — Desenvolvimento de Aplicações Web 
+**Aluno:** Adriano Viana Dama  
+**RA:** 28326260
+**Aluno:** Arthur Faria Cardial  
+**RA:** 28326154 
+**Aluno:** Caio Fellipe Soares Mendes  
+**RA:** 28326042  
 **Aluno:** Gabriel Camargo Vanin  
-**RA:** 28325665  
-
+**RA:** 28325665 
 ---
 
 ## 📋 Sobre o Projeto
@@ -319,15 +324,18 @@ Componente → PostsService → HttpClient → JSON Server (porta 3000)
 ---
 
 ## 👨‍💻 Autores
+**FRONTEND/UI**
+Arthur Faria Cardial   
+Caio Fellipe Soares Mendes
 
-**Gabriel Camargo Vanin**  
-RA: 28325665   
-**Adriano Viana Dama**  
-RA: 28326260   
-**Arthur Faria Cardial**  
-RA: 28326154   
-**Caio Fellipe Soares Mendes**  
-RA: 28326042   
+**BACKEND/API**
+Adriano Viana Dama 
+
+**ANGULAR/ARQUITETURA**
+Gabriel Camargo Vanin
+
+ 
+  
 
 ---
 
