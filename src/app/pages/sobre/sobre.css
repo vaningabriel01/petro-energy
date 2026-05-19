@@ -143,6 +143,13 @@
   color: #a8c4e0;
 }
 
+.sobre__card-icone {
+  font-size: 2.5rem;
+  color: #1e6fbf;
+  font-weight: 300;
+  line-height: 1;
+}
+
 @media (max-width: 900px) {
   .sobre__cards {
     grid-template-columns: 1fr;
