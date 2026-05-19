@@ -251,7 +251,7 @@ O layout é adaptado para três breakpoints:
 
 ```bash
 # Clonar o repositório
-git clone <url-do-repositorio>
+git clone <https://github.com/vaningabriel01/petro-energy.git>
 cd petro-energy
 
 # Instalar dependências
@@ -321,8 +321,13 @@ Componente → PostsService → HttpClient → JSON Server (porta 3000)
 ## 👨‍💻 Autor
 
 **Gabriel Camargo Vanin**  
-RA: 28325665  
-
+RA: 28325665   
+**Adriano Viana Dama**  
+RA: 28326260 
+**Arthur Faria Cardial**  
+RA: 28326154 
+**Caio Fellipe Soares Mendes**  
+RA: 28326042
 ---
 
 *Trabalho desenvolvido para a disciplina de Codigos de alta performance*
