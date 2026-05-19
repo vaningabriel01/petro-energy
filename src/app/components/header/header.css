@@ -62,6 +62,10 @@
   cursor: pointer;
 }
 
+.header__overlay {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .header__menu {
     display: none;
@@ -94,5 +98,22 @@
 
   .header__nav--aberto .header__menu li:last-child a {
     border-bottom: none;
+  }
+
+  .header__overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    top: 68px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 98;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .header__overlay--visivel {
+    opacity: 1;
+    pointer-events: all;
   }
 }
