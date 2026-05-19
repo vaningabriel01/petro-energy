@@ -70,4 +70,29 @@
   .header__menu-toggle {
     display: block;
   }
+
+  .header__nav--aberto .header__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background-color: #0a1628;
+    border-top: 1px solid #1e3a5f;
+    padding: 1rem 1.5rem;
+    z-index: 99;
+  }
+
+  .header__nav--aberto .header__menu li a {
+    display: block;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #1e3a5f;
+    font-size: 1rem;
+  }
+
+  .header__nav--aberto .header__menu li:last-child a {
+    border-bottom: none;
+  }
 }
