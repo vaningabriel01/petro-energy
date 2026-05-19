@@ -1,33 +1,37 @@
 <header class="header" role="banner">
   <div class="header__container">
 
-    <a routerLink="/" class="header__brand" aria-label="Petro Energy - Página inicial">
-      <span class="header__logo" aria-hidden="true">⛽</span>
-      <span class="header__name">Petro Energy</span>
+    <a routerLink="/" class="header__brand" aria-label="PetroEnergy - Página inicial">
+      <app-logo />
     </a>
 
-    <nav class="header__nav" aria-label="Menu principal">
+    <nav class="header__nav"
+         aria-label="Menu principal"
+         [class.header__nav--aberto]="menuAberto()">
       <ul class="header__menu" role="list">
         <li role="listitem">
           <a routerLink="/"
              routerLinkActive="active"
              [routerLinkActiveOptions]="{exact: true}"
-             aria-label="Ir para a página inicial">
+             aria-label="Ir para a página inicial"
+             (click)="fecharMenu()">
             Home
-          </a>
-        </li>
-        <li role="listitem">
-          <a routerLink="/sobre"
-             routerLinkActive="active"
-             aria-label="Ir para a página sobre">
-            Sobre
           </a>
         </li>
         <li role="listitem">
           <a routerLink="/projetos"
              routerLinkActive="active"
-             aria-label="Ir para projetos sociais">
+             aria-label="Ir para a página de projetos sociais"
+             (click)="fecharMenu()">
             Projetos Sociais
+          </a>
+        </li>
+        <li role="listitem">
+          <a routerLink="/sobre"
+             routerLinkActive="active"
+             aria-label="Ir para a página sobre"
+             (click)="fecharMenu()">
+            Sobre
           </a>
         </li>
       </ul>
@@ -35,13 +39,20 @@
 
     <button
       class="header__menu-toggle"
-      aria-label="Abrir menu de navegação"
-      aria-expanded="false"
+      [attr.aria-label]="menuAberto() ? 'Fechar menu de navegação' : 'Abrir menu de navegação'"
+      [attr.aria-expanded]="menuAberto()"
       aria-controls="menu-principal"
       type="button"
+      (click)="toggleMenu()"
     >
-      ☰
+      {{ menuAberto() ? '✕' : '☰' }}
     </button>
 
   </div>
+
+  <div class="header__overlay"
+     [class.header__overlay--visivel]="menuAberto()"
+     (click)="fecharMenu()">
+  </div>
+
 </header>
