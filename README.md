@@ -329,14 +329,14 @@ Componente → PostsService → HttpClient → JSON Server (porta 3000)
 ---
 
 ## 👨‍💻 Autores
-**FRONTEND/UI**
+**FRONTEND/UI**(\)
 Arthur Faria Cardial   
 Caio Fellipe Soares Mendes
 
-**BACKEND/API**
+**BACKEND/API**(\)
 Adriano Viana Dama 
 
-**ANGULAR/ARQUITETURA**
+**ANGULAR/ARQUITETURA**(\)
 Gabriel Camargo Vanin
 
  
