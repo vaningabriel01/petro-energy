@@ -1,9 +1,8 @@
 <header class="header" role="banner">
   <div class="header__container">
 
-    <a routerLink="/" class="header__brand" aria-label="Petro Energy - Página inicial">
-      <span class="header__logo" aria-hidden="true">⛽</span>
-      <span class="header__name">Petro Energy</span>
+    <a routerLink="/" class="header__brand" aria-label="PetroEnergy - Página inicial">
+      <app-logo />
     </a>
 
     <nav class="header__nav"
@@ -50,4 +49,10 @@
     </button>
 
   </div>
+
+  <div class="header__overlay"
+     [class.header__overlay--visivel]="menuAberto()"
+     (click)="fecharMenu()">
+  </div>
+
 </header>
