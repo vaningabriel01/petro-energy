@@ -1,0 +1,31 @@
+<section class="busca">
+  <div class="busca__container">
+
+    <h1 class="busca__titulo">
+      Resultados para: <span>"{{ termo() }}"</span>
+    </h1>
+
+    @if (carregando()) {
+      <p class="busca__status">Buscando...</p>
+    } @else if (resultados().length === 0) {
+      <p class="busca__status">Nenhum resultado encontrado para "<strong>{{ termo() }}</strong>".</p>
+    } @else {
+      <p class="busca__contagem">{{ resultados().length }} resultado(s) encontrado(s)</p>
+      <div class="busca__grid">
+        @for (item of resultados(); track item.id) {
+          <a [routerLink]="item.rota" class="busca__card">
+            <img [src]="item.imagem" [alt]="item.titulo" class="busca__card-img" />
+            <div class="busca__card-body">
+              <span class="busca__badge" [class.busca__badge--projeto]="item.tipo === 'projeto'">
+                {{ item.tipo === 'post' ? 'Post' : 'Projeto' }}
+              </span>
+              <h2 class="busca__card-titulo">{{ item.titulo }}</h2>
+              <p class="busca__card-desc">{{ item.descricao }}</p>
+            </div>
+          </a>
+        }
+      </div>
+    }
+
+  </div>
+</section>
