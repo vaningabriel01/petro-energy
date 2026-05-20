@@ -15,18 +15,18 @@
   gap: 1rem;
 }
 
-.hero__subtitulo {
-  font-size: 0.9rem;
-  color: #4da6ff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
 .hero__titulo {
   font-size: 3rem;
   font-weight: 800;
   color: #fff;
   line-height: 1.2;
+}
+
+.hero__subtitulo {
+  font-size: 0.9rem;
+  color: #dd651a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .hero__descricao {
@@ -39,7 +39,7 @@
 .hero__btn {
   margin-top: 0.5rem;
   padding: 0.8rem 2rem;
-  background-color: #1e6fbf;
+  background-color: #fc6a04;
   color: #fff;
   border-radius: 6px;
   font-weight: 600;
@@ -48,7 +48,7 @@
 }
 
 .hero__btn:hover {
-  background-color: #4da6ff;
+  background-color: #f19154;
 }
 
 /* Apresentação */
@@ -159,10 +159,9 @@
   }
 
   .hero__titulo {
-    font-size: 1.8rem;
-  }
-
   .hero {
     padding: 3rem 1rem;
   }
+}
+
 }

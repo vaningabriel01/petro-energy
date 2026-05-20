@@ -75,7 +75,10 @@
 }
 
 .sobre__card-icone {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #fc6a04;
+  font-weight: 300;
+  line-height: 1;
 }
 
 .sobre__card-titulo {
@@ -135,12 +138,19 @@
 .sobre__stat-numero {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #4da6ff;
+  color: #fc6a04;
 }
 
 .sobre__stat-label {
   font-size: 0.9rem;
   color: #a8c4e0;
+}
+
+.sobre__card-icone {
+  font-size: 2.5rem;
+  color: #1e6fbf;
+  font-weight: 300;
+  line-height: 1;
 }
 
 @media (max-width: 900px) {

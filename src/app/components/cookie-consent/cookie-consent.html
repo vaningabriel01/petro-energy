@@ -1,0 +1,16 @@
+<div class="cookie-backdrop" [class.hidden]="!isVisible()">
+  <div class="cookie-banner">
+
+    <p class="cookie-text">
+      Utilizamos cookies para melhorar a sua experiência no site. Ao continuar navegando,
+      você concorda com a nossa
+      <a href="/privacidade" class="cookie-link">Política de Privacidade</a>.
+    </p>
+
+    <div class="cookie-actions">
+      <button class="btn btn-ghost" (click)="rejectAll()">Rejeitar</button>
+      <button class="btn btn-primary" (click)="acceptAll()">Aceitar cookies</button>
+    </div>
+
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { Home } from './pages/home/home';
 import { Sobre } from './pages/sobre/sobre';
 import { Projetos } from './pages/projetos/projetos';
 import { PostView } from './pages/post-view/post-view';
+import { Busca } from './pages/busca/busca';
 
 export const routes: Routes = [
   {
@@ -20,6 +21,9 @@ export const routes: Routes = [
   {
     path: 'post/:id',
     component: PostView
+  },
+  { path: 'busca', 
+    component: Busca 
   },
   {
     path: '**',

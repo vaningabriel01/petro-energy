@@ -1,12 +1,12 @@
 <header class="header" role="banner">
   <div class="header__container">
 
-    <a routerLink="/" class="header__brand" aria-label="Petro Energy - Página inicial">
-      <span class="header__logo" aria-hidden="true">⛽</span>
-      <span class="header__name">Petro Energy</span>
+    <a routerLink="/" class="header__brand" aria-label="PetroEnergy - Página inicial">
+      <app-logo />
     </a>
 
     <nav class="header__nav"
+         id="menu-principal"
          aria-label="Menu principal"
          [class.header__nav--aberto]="menuAberto()">
       <ul class="header__menu" role="list">
@@ -38,16 +38,45 @@
       </ul>
     </nav>
 
-    <button
-      class="header__menu-toggle"
-      [attr.aria-label]="menuAberto() ? 'Fechar menu de navegação' : 'Abrir menu de navegação'"
-      [attr.aria-expanded]="menuAberto()"
-      aria-controls="menu-principal"
-      type="button"
-      (click)="toggleMenu()"
-    >
-      {{ menuAberto() ? '✕' : '☰' }}
-    </button>
+    <div class="header__actions">
+
+      @if (!buscaAberta()) {
+        <button class="header__search-toggle" (click)="toggleBusca()" aria-label="Abrir busca">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+      }
+
+      <button
+        class="header__menu-toggle"
+        [attr.aria-label]="menuAberto() ? 'Fechar menu de navegação' : 'Abrir menu de navegação'"
+        [attr.aria-expanded]="menuAberto()"
+        aria-controls="menu-principal"
+        type="button"
+        (click)="toggleMenu()"
+      >
+        {{ menuAberto() ? '✕' : '☰' }}
+      </button>
+
+    </div>
+
+    @if (buscaAberta()) {
+      <div class="header__search-overlay">
+        <app-search-bar />
+        <button class="header__search-close" (click)="fecharBusca()" aria-label="Fechar busca">
+          ✕
+        </button>
+      </div>
+    }
 
   </div>
+
+  <div class="header__overlay"
+       [class.header__overlay--visivel]="menuAberto()"
+       (click)="fecharMenu()"
+       aria-hidden="true">
+  </div>
+
 </header>
