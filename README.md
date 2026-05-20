@@ -1,14 +1,19 @@
 # 🛢️ Petro Energy — Site Corporativo
 
-Trabalho Semestral — Desenvolvimento de Aplicações Web  
-**Aluno:** Gabriel Camargo Vanin  
-**RA:** 28325665  
+Trabalho Semestral — Desenvolvimento de Aplicações Web
+
+| Aluno | RA |
+|---|---|
+| Gabriel Camargo Vanin | 28325665 |
+| Adriano Viana Dama | 28326260 |
+| Arthur Faria Cardial | 28326154 |
+| Caio Fellipe Soares Mendes | 28326042 |
 
 ---
 
 ## 📋 Sobre o Projeto
 
-O **Petro Energy** é um site corporativo fictício desenvolvido como trabalho semestral, utilizando **Angular** como framework principal. A aplicação é uma **SPA (Single Page Application)** que simula o portal de uma empresa petrolífera brasileira, com feed de notícias, projetos sociais, página institucional e visualização de posts completos.
+O **Petro Energy** é um site corporativo fictício desenvolvido como trabalho semestral, utilizando **Angular** como framework principal. A aplicação é uma **SPA (Single Page Application)** que simula o portal de uma empresa petrolífera brasileira, com feed de notícias, projetos sociais, página institucional, busca integrada e visualização de posts completos.
 
 ---
 
@@ -16,7 +21,7 @@ O **Petro Energy** é um site corporativo fictício desenvolvido como trabalho s
 
 | Requisito | Status |
 |---|---|
-| Mínimo de 3 páginas | ✅ 4 páginas |
+| Mínimo de 3 páginas | ✅ 5 páginas |
 | Framework Angular | ✅ |
 | SPA (Single Page Application) | ✅ |
 | Componentes reutilizáveis | ✅ |
@@ -48,10 +53,30 @@ src/app/
 │   │   ├── footer.ts
 │   │   ├── footer.html
 │   │   └── footer.css
-│   └── post-card/
-│       ├── post-card.ts
-│       ├── post-card.html
-│       └── post-card.css
+│   ├── logo/
+│   │   ├── logo.ts
+│   │   ├── logo.html
+│   │   └── logo.css
+│   ├── post-card/
+│   │   ├── post-card.ts
+│   │   ├── post-card.html
+│   │   └── post-card.css
+│   ├── search-bar/
+│   │   ├── search-bar.ts
+│   │   ├── search-bar.html
+│   │   └── search-bar.css
+│   ├── social-links/
+│   │   ├── social-links.ts
+│   │   ├── social-links.html
+│   │   └── social-links.css
+│   ├── scroll-to-top/
+│   │   ├── scroll-to-top.ts
+│   │   ├── scroll-to-top.html
+│   │   └── scroll-to-top.css
+│   └── cookie-consent/
+│       ├── cookie-consent.ts
+│       ├── cookie-consent.html
+│       └── cookie-consent.css
 │
 ├── pages/
 │   ├── home/
@@ -66,17 +91,22 @@ src/app/
 │   │   ├── projetos.ts
 │   │   ├── projetos.html
 │   │   └── projetos.css
-│   └── post-view/
-│       ├── post-view.ts
-│       ├── post-view.html
-│       └── post-view.css
+│   ├── post-view/
+│   │   ├── post-view.ts
+│   │   ├── post-view.html
+│   │   └── post-view.css
+│   └── busca/
+│       ├── busca.ts
+│       ├── busca.html
+│       └── busca.css
 │
 ├── services/
 │   └── posts.ts
 │
 ├── interfaces/
 │   ├── post.ts
-│   └── projeto.ts
+│   ├── projetos.ts
+│   └── busca.ts
 │
 ├── app.ts
 ├── app.html
@@ -105,6 +135,7 @@ src/app/
 - Hero da página
 - Introdução sobre responsabilidade social
 - Grid de cards dos projetos sociais consumidos via API
+- Exibição dos posts extras da API
 
 ### Detalhes do Post (`/post/:id`)
 - Rota dinâmica com parâmetro `:id`
@@ -113,28 +144,39 @@ src/app/
 - Imagem, categoria, data e texto completo
 - Botão de retorno para a home
 
+### Busca (`/busca`)
+- Página de resultados de busca
+- Busca simultânea em posts e projetos via `forkJoin`
+- Filtra por título, resumo e categoria
+- Resultados clicáveis com redirecionamento
+
 ---
 
 ## 🧩 Componentes
 
 ### `app-header`
-Componente compartilhado de cabeçalho com:
-- Logo e nome da empresa
-- Menu de navegação com `RouterLink` e `RouterLinkActive`
-- `role="banner"` para acessibilidade
-- Responsivo com botão de toggle para mobile
+Cabeçalho fixo com logo, menu de navegação, barra de busca integrada e menu mobile com overlay. Utiliza `RouterLink`, `RouterLinkActive` e Signals para controle de estado.
 
 ### `app-footer`
-Componente compartilhado de rodapé com:
-- Nome e slogan da empresa
-- Links de navegação secundária
-- `role="contentinfo"` para acessibilidade
+Rodapé com logo, links de navegação, barra de busca, informações de contato, portal da transparência e botões de redes sociais.
+
+### `app-logo`
+Componente isolado da identidade visual da empresa, utilizando SVG externo da pasta `public/`.
 
 ### `app-post-card`
-Componente reutilizável de card de post com:
-- `@Input()` para receber dados do post
-- Imagem, categoria, título, resumo e data
-- Link para página de detalhes via `RouterLink`
+Card reutilizável que recebe um objeto `Post` via `@Input()` e exibe imagem, categoria, título, resumo, data e link para detalhes.
+
+### `app-search-bar`
+Barra de busca com Signal para controle do termo digitado. Ao submeter, navega para `/busca?q=termo` via `Router`.
+
+### `app-social-links`
+Botões circulares com SVG inline das redes sociais (LinkedIn, Instagram, YouTube e X), abrindo em nova aba com `rel="noopener noreferrer"`.
+
+### `app-scroll-to-top`
+Botão flutuante que aparece após 250px de scroll usando `@HostListener('window:scroll')` e rola a página suavemente ao topo.
+
+### `app-cookie-consent`
+Banner de consentimento de cookies com opções de aceitar todos ou apenas os necessários. Persiste a decisão no `localStorage`.
 
 ---
 
@@ -142,14 +184,18 @@ Componente reutilizável de card de post com:
 
 | Tecnologia | Versão | Uso |
 |---|---|---|
-| Angular | 19+ | Framework principal |
-| TypeScript | 5+ | Linguagem de programação |
+| Angular | 21+ | Framework principal |
+| TypeScript | 5.9+ | Linguagem de programação |
 | HTML5 | — | Marcação semântica |
 | CSS3 | — | Estilização modularizada |
 | JSON Server | 1+ | API REST mock |
 | HttpClient | Angular | Comunicação HTTP |
 | Angular Router | Angular | Navegação SPA |
 | Angular Signals | Angular 17+ | Reatividade de dados |
+| FormsModule | Angular | Two-way binding na busca |
+| RxJS forkJoin | RxJS 7.8 | Requisições paralelas na busca |
+| Vitest | 4+ | Testes unitários |
+| Prettier | 3+ | Formatação de código |
 
 ---
 
@@ -202,6 +248,7 @@ const routes: Routes = [
   { path: 'sobre',     component: Sobre },
   { path: 'projetos',  component: Projetos },
   { path: 'post/:id',  component: PostView },
+  { path: 'busca',     component: Busca },
   { path: '**',        redirectTo: '' }
 ];
 ```
@@ -217,12 +264,12 @@ O projeto foi desenvolvido seguindo as diretrizes **WCAG 2 AA** e validado com a
 - Skip link para pular ao conteúdo principal
 - `role="banner"` no header
 - `role="contentinfo"` no footer
-- `role="main"` no conteúdo principal
 - `aria-label` em todos os links e elementos interativos
 - `aria-hidden="true"` em elementos decorativos
 - `aria-live` em elementos de status dinâmico
 - Contraste de cores aprovado (mínimo 4.5:1)
 - Foco visível em todos os elementos interativos
+- `rel="noopener noreferrer"` em links externos
 
 ---
 
@@ -234,7 +281,7 @@ O layout é adaptado para três breakpoints:
 |---|---|
 | Desktop (> 900px) | Grid de 3 colunas nos posts |
 | Tablet (768px — 900px) | Grid de 2 colunas |
-| Mobile (< 600px) | Grid de 1 coluna |
+| Mobile (< 600px) | Grid de 1 coluna, menu hamburguer |
 
 ---
 
@@ -251,7 +298,7 @@ O layout é adaptado para três breakpoints:
 
 ```bash
 # Clonar o repositório
-git clone <https://github.com/vaningabriel01/petro-energy.git>
+git clone https://github.com/vaningabriel01/petro-energy.git
 cd petro-energy
 
 # Instalar dependências
@@ -278,7 +325,7 @@ json-server --watch db.json --port 3000
 ng serve
 ```
 
-Acesse a aplicação em: **http://localhost:4200**  
+Acesse a aplicação em: **http://localhost:4200**
 Acesse a API em: **http://localhost:3000**
 
 ---
@@ -291,16 +338,25 @@ Usuário
 index.html (app-root)
    ↓
 AppComponent (app.html)
+   ├── app-cookie-consent (banner de cookies)
    ├── app-header (fixo em todas as páginas)
+   │     ├── app-logo
+   │     └── app-search-bar
    ├── main > router-outlet (conteúdo dinâmico por rota)
-   │     ├── /          → HomeComponent
-   │     ├── /sobre     → SobreComponent
-   │     ├── /projetos  → ProjetosComponent
-   │     └── /post/:id  → PostViewComponent
+   │     ├── /           → Home
+   │     ├── /sobre      → Sobre
+   │     ├── /projetos   → Projetos
+   │     ├── /post/:id   → PostView
+   │     └── /busca      → Busca
+   ├── app-scroll-to-top (botão flutuante)
    └── app-footer (fixo em todas as páginas)
+         ├── app-logo
+         ├── app-search-bar
+         └── app-social-links
 
 Comunicação com API:
-Componente → PostsService → HttpClient → JSON Server (porta 3000)
+Componente → PostsService → HttpClient → JSON Server (:3000)
+Busca simultânea: forkJoin([getPosts(), getProjetos()])
 ```
 
 ---
@@ -311,24 +367,26 @@ Componente → PostsService → HttpClient → JSON Server (porta 3000)
 - **Componentização:** Separação de responsabilidades em componentes reutilizáveis
 - **Injeção de dependência:** Services injetados via construtor
 - **Signals:** Reatividade moderna do Angular 17+ para atualização da UI
-- **Interfaces TypeScript:** Tipagem forte dos dados da API
+- **Interfaces TypeScript:** Tipagem forte dos dados da API e da busca
 - **CSS modular:** Cada componente possui seu próprio arquivo CSS
 - **HTML semântico:** Uso correto de `header`, `nav`, `main`, `section`, `article`, `footer`
 - **Rotas dinâmicas:** Parâmetro `:id` capturado via `ActivatedRoute`
+- **forkJoin:** Requisições paralelas para busca simultânea em posts e projetos
+- **HostListener:** Detecção de scroll para exibir botão de voltar ao topo
+- **localStorage:** Persistência da preferência de cookies
+- **SVG inline:** Ícones vetoriais sem dependências externas
 
 ---
 
 ## 👨‍💻 Autores
 
-**Gabriel Camargo Vanin**  
-RA: 28325665   
-**Adriano Viana Dama**  
-RA: 28326260   
-**Arthur Faria Cardial**  
-RA: 28326154   
-**Caio Fellipe Soares Mendes**  
-RA: 28326042   
+| Aluno | RA |
+|---|---|
+| Gabriel Camargo Vanin | 28325665 |
+| Adriano Viana Dama | 28326260 |
+| Arthur Faria Cardial | 28326154 |
+| Caio Fellipe Soares Mendes | 28326042 |
 
 ---
 
-*Trabalho desenvolvido para a disciplina de Codigos de alta performance*
+*Trabalho desenvolvido para a disciplina de Códigos de Alta Performance*
